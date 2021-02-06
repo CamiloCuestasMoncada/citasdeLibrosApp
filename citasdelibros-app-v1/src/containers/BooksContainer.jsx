@@ -69,10 +69,7 @@ BooksContainer.propTypes = {
 };
 
 BooksContainer.defaultProps = {
-    books: [
-
-    
-    ]
+    books: []
     
 }
 

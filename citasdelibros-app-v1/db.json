@@ -2,22 +2,22 @@
   "books": [
 
     {
-        "dni": 95162081,
+        "dni": "95162081",
         "name": "Camilo",
-        "quote": "gdsfgsdfgsdfgdsf dsfg sdf dfgdsd fsg",
+        "quote": "El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo.",
         "book": "Cien años de soledad",
-        "writer": "Gabo"
+        "writer": "Gabriel García Márquez"
 
     },
     {
-      "dni": 95165081,
+      "dni": "95165081",
       "name": "Pedro",
-      "quote": "gdsfgddsfg sdf dfgdsd fsg",
-      "book": "dada",
-      "writer": "dssdsdsd"
+      "quote": "El tiempo corre de la misma manera para todos los seres humanos; pero todo ser humano flota de distinta manera en el tiempo",
+      "book": "Lo bello y lo triste",
+      "writer": "Yasunari Kawabata"
     },
     {
-      "dni": 95962081,
+      "dni": "95962081",
       "name": "Camilo",
       "quote": "gdsfgsdfgsdfgddsfgsdfgdfgdsd fsg",
       "book": "gfdgf",

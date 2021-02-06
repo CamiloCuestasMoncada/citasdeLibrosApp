@@ -28,7 +28,7 @@ BookListItem.propTypes = {
     book: PropTypes.string.isRequired,
     editAction: PropTypes.string.isRequired,
     delAction: PropTypes.string.isRequired,
-    dni: PropTypes.number.isRequired,
+    dni: PropTypes.string.isRequired,
 };
 
 export default BookListItem;
