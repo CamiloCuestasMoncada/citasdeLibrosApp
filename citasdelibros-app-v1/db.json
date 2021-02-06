@@ -1,4 +1,34 @@
 {
+  "books": [
+
+    {
+        "dni": "95162081",
+        "name": "Camilo",
+        "quote": "El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo.",
+        "book": "Cien años de soledad",
+        "writer": "Gabriel García Márquez"
+
+    },
+    {
+      "dni": "95165081",
+      "name": "Pedro",
+      "quote": "El tiempo corre de la misma manera para todos los seres humanos; pero todo ser humano flota de distinta manera en el tiempo",
+      "book": "Lo bello y lo triste",
+      "writer": "Yasunari Kawabata"
+    },
+    {
+      "dni": "95962081",
+      "name": "Camilo",
+      "quote": "gdsfgsdfgsdfgddsfgsdfgdfgdsd fsg",
+      "book": "gfdgf",
+      "writer": "dfdf"
+
+    }
+
+],
+
+
+
   "posts": [
     {
       "id": 1,
