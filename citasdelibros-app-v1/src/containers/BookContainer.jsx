@@ -9,14 +9,7 @@ import BookEdit from './../components/BookEdit';
 import BookData from '../components/BookData';
 
 
-/*
-<div>
-                    <p>Subido por:  "{this.props.book.name}"</p>
-                    <p>Cita:  "{this.props.book.quote}"</p>
-                    <p>Autor/a:  "{this.props.book.writer}"</p>
-                    
-                </div>
-*/
+
 
 class BookContainer extends Component {
     renderBody = () => (
