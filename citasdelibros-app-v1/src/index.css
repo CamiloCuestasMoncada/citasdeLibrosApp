@@ -1,3 +1,11 @@
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +19,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app-frame{
+  margin: 5%;
+  padding: 30px;
+  width: calc(80vw);
+}
+
+.books-actions{
+  background-color: rgb(146, 231, 199);
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.books-actions button{
+  background-color: #d4ed64;
+  min-width: 100px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+  border-color: chartreuse;
+}
+
+.book-list-item .field{
+  width: 160px;
+  margin: 1px;
+  padding: 4px;
+  background-color: #f2ffc5;
+  display: inline-block;
+}
+

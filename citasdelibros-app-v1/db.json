@@ -1,4 +1,34 @@
 {
+  "books": [
+
+    {
+        "dni": 95162081,
+        "name": "Camilo",
+        "quote": "gdsfgsdfgsdfgdsf dsfg sdf dfgdsd fsg",
+        "book": "Cien años de soledad",
+        "writer": "Gabo"
+
+    },
+    {
+      "dni": 95165081,
+      "name": "Pedro",
+      "quote": "gdsfgddsfg sdf dfgdsd fsg",
+      "book": "dada",
+      "writer": "dssdsdsd"
+    },
+    {
+      "dni": 95962081,
+      "name": "Camilo",
+      "quote": "gdsfgsdfgsdfgddsfgsdfgdfgdsd fsg",
+      "book": "gfdgf",
+      "writer": "dfdf"
+
+    }
+
+],
+
+
+
   "posts": [
     {
       "id": 1,
