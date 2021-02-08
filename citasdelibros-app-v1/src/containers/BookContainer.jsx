@@ -10,6 +10,7 @@ import BookData from '../components/BookData';
 //import {withRouter} from './HomeContainer';
 import { fetchBooks } from './../actions/fetchBooks';
 import { updateBook } from './../actions/updateBooks';
+import { SubmissionError } from 'redux-form';
 
 
 
@@ -26,7 +27,11 @@ class BookContainer extends Component {
     handleSubmit = values => {
         console.log(JSON.stringify(values));
         const {id} = values;
-        return this.props.updateBook(id, values)
+        return this.props.updateBook(id, values).then( r=> {
+            if(r.error) {
+                throw new SubmissionError(r.payload);
+            }
+        });
     }
 
     handleOnBack = ()=> {

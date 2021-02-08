@@ -3,9 +3,9 @@
     {
       "id": "95162081",
       "dni": "95162081",
-      "name": "Camilocc",
-      "quote": "El mundo era taaaaaaaaaaaaan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo.",
-      "book": "Cien años de soldad",
+      "name": "Camilo Cuestas",
+      "quote": "El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo.",
+      "book": "Cien años de soledad",
       "writer": "Gabriel García Márquez"
     },
     {
@@ -18,11 +18,43 @@
     },
     {
       "id": "95962081",
-      "dni": "94162081",
-      "name": "andres kiluuu",
-      "quote": "El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo.",
-      "book": "Cumbres Borrascosas",
-      "writer": "Gabriel García Márquez"
+      "dni": "975486521",
+      "name": "Paloma D",
+      "quote": "¡Qué extraña cosa el conocimiento! Una vez que ha penetrado en la mente, se aferra a ella como la hiedra a la roca",
+      "book": "Frankenstein.",
+      "writer": "Mary Shelley"
+    },
+    {
+      "book": "El tunelee",
+      "quote": "fsdgsdf",
+      "writer": "Sabat",
+      "name": "lopoi",
+      "dni": "98745698",
+      "id": "tIlUb7b"
+    },
+    {
+      "quote": "¡Ah, la música! -Dijo, enjugándose los ojos. ¡Una magia más allá de todo lo que hacemos aquí!",
+      "book": "Harry Potter y la piedra filosofal",
+      "writer": "Joanne Kathleen Rowling",
+      "name": "Aquiles ",
+      "dni": "1023908577",
+      "id": "wqi5_Pf"
+    },
+    {
+      "book": "sasa",
+      "quote": "sasasas",
+      "writer": "sssss",
+      "name": "aaaa",
+      "dni": "45345345345",
+      "id": "PSi1xaw"
+    },
+    {
+      "book": "Ensayo sobre la ceguera",
+      "writer": "Jose Saramago",
+      "name": "Skarpink",
+      "dni": "95068091",
+      "quote": "“Si no somos capaces de vivir enteramente como personas, hagamos lo posible para no vivir enteramente como animales, y tantas veces lo repitió, que el resto de la sala acabó por convertir en máxima, en sentencia, en doctrina, en regla de vida, aquellas palabras, en el fondo simples y elementales.”",
+      "id": "cy1Ciqu"
     }
   ],
   "posts": [

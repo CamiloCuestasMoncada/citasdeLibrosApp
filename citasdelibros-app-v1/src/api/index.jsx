@@ -8,3 +8,24 @@ export const apiPut = (url, id, obj) => () =>
         body: JSON.stringify(obj),
         headers: new Headers({'Content-type': 'application/json'})
     }).then(v => v.json())
+    .then(r => {
+        if(r.error){
+        
+        return ({error: r.validation});
+    }
+    return r;
+});
+
+export const apiPost = (url,obj) => () =>
+    fetch(`${url}`,{
+        method: 'POST',
+        body: JSON.stringify(obj),
+        headers: new Headers({'Content-type': 'application/json'})
+    }).then(v => v.json())
+    .then(r => {
+        if(r.error){
+        
+        return ({error: r.validation});
+    }
+    return r;
+    })

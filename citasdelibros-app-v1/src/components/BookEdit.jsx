@@ -1,7 +1,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {reduxForm, Field} from 'redux-form';
+import {reduxForm, Field } from 'redux-form';
+import { Prompt } from 'react-router-dom';
 //import { connect } from 'react-redux';
 import { setPropsAsInitial } from './../helpers/setPropsAsInitial';
 import BooksAccions from './BooksAccions';
@@ -18,7 +19,7 @@ let errorMessage = meta => {
     }
 }
 
-const MyField = ({input, meta, type, label, name, onBack}) => (
+const MyField = ({input, meta, type, label, name}) => (
     <div>
         <label htmlFor={name}>{label}</label>
         <input {...input} type ={!type ? "text" : type}/>
@@ -60,7 +61,7 @@ const isNumber = value => (
     
 );
 
-const BookEdit = ({name,book, quote, writer, handleSubmit, submitting, onBack}) => {
+const BookEdit = ({name,book, quote, writer, handleSubmit, submitting, onBack, pristine, submitSucceeded}) => {
     return (
         <div>
             <h2>Edición de la información del libro:</h2>
@@ -122,9 +123,14 @@ const BookEdit = ({name,book, quote, writer, handleSubmit, submitting, onBack}) 
                     
 
                     <BooksAccions>
-                        <button type="submit" disabled={submitting}>Aceptar</button>
-                        <button onClick={onBack}> Cancelar </button>
+                        <button type="submit" disabled={pristine || submitting}>Aceptar</button>
+                        <button type="button" disabled={submitting} onClick={onBack}>Cancelar</button>
                     </BooksAccions>
+                    <Prompt
+                        when={!pristine && !submitSucceeded}
+                        message="Se perderan los datos si continúa"
+
+                    ></Prompt>
                 
             </form>
         </div>
