@@ -4,32 +4,128 @@ import PropTypes from 'prop-types';
 import {reduxForm, Field} from 'redux-form';
 //import { connect } from 'react-redux';
 import { setPropsAsInitial } from './../helpers/setPropsAsInitial';
+import BooksAccions from './BooksAccions';
+/*const isRequired = value => {
+    if (!value)  {
+        return "Este campo es requeeeerido"
+    }
 
-const BookEdit = ({book, quote, writer}) => {
+}*/
+
+let errorMessage = meta => {
+    if(meta.touched && meta.error){
+        return <span>{meta.error}</span>
+    }
+}
+
+const MyField = ({input, meta, type, label, name, onBack}) => (
+    <div>
+        <label htmlFor={name}>{label}</label>
+        <input {...input} type ={!type ? "text" : type}/>
+       {errorMessage(meta)}
+        
+    </div>
+);
+
+const validate = values => {
+    const error = {};
+
+    if(!values.name){
+        error.name = "El campo nombre es requerido"
+    }
+
+    if(!values.book){
+        error.book = "El campo libro es requerido"
+    }
+
+    if(!values.quote){
+        error.quote = "El campo Cita es requerido"
+    }
+
+    if(!values.writer){
+        error.writer = "El campo Autor/a es requerido"
+    }
+
+    if(!values.dni){
+        error.dni = "El campo Dni es requerido"
+    }
+
+
+    return error;
+}
+
+const isNumber = value => (
+    isNaN(Number(value)) && "Debe ser un número"
+        
+    
+);
+
+const BookEdit = ({name,book, quote, writer, handleSubmit, submitting, onBack}) => {
     return (
         <div>
             <h2>Edición de la información del libro:</h2>
-            <form action="">
-                <div>
-                    <label htmlFor="">Nombre del libro</label>
-                    <Field name="book" component="input" type="text"></Field>
-                </div>
-                <div>
-                    <label htmlFor="">Cita</label>
-                    <Field name="quote" component="input" type="text"></Field>
-                </div>
-                <div>
-                    <label htmlFor="">Autor/a</label>
-                    <Field name="writer" component="input" type="text"></Field>
-                </div>
-                <div>
-                    <label htmlFor="">Nombre de usuario</label>
-                    <Field name="name" component="input" type="text"></Field>
-                </div>
-                <div>
-                    <label htmlFor="">Documento de identidad</label>
-                    <Field name="dni" component="input" type="number"></Field>
-                </div>
+            <form onSubmit={handleSubmit}>
+               
+                    
+                    <Field 
+                        name="book" 
+                        component={MyField} 
+                        type="text"
+                        //validate={isRequired}
+                        label = "Libro"
+                    >
+                    </Field>
+                
+                
+                    
+                    <Field 
+                        name="quote" 
+                        component={MyField}  
+                        label = "Cita"
+                        //validate={isRequired}
+                    >
+                    </Field>
+                
+                
+                    
+                    <Field 
+                        name="writer" 
+                        component={MyField}
+                        //validate={isRequired}
+                        label = "Autor/a"
+                    >
+
+                    </Field>
+               
+                
+                    
+                    <Field 
+                        name="name" 
+                        component={MyField}
+                        //validate={isRequired}
+                        label = "nombre"
+                    >
+
+                    </Field>
+                
+               
+                    
+                    <Field 
+                        name="dni" 
+                        component={MyField}
+                        type="number"
+                        validate={isNumber}
+                        label = "dni"
+                    >
+
+                    </Field>
+                    
+
+                    <BooksAccions>
+                        <button type="submit" disabled={submitting}>Aceptar</button>
+                        <button onClick={onBack}> Cancelar </button>
+                    </BooksAccions>
+                
             </form>
         </div>
     );
@@ -37,10 +133,15 @@ const BookEdit = ({book, quote, writer}) => {
 
 BookEdit.propTypes = {
     book: PropTypes.string,
-    quote: PropTypes.number,
-    writer: PropTypes.number,
+    quote: PropTypes.string,
+    writer: PropTypes.string,
+    //onBack: PropTypes.func.isRequired,
 };
-const BookEditForm = reduxForm({form: 'BookEdit'}) (BookEdit);
+const BookEditForm = reduxForm(
+    {
+        form: 'BookEdit',
+        validate: validate
+    }) (BookEdit);
 export default setPropsAsInitial(BookEditForm);
 
 

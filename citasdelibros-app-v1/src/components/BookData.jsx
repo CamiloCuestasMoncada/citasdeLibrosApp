@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BooksAccions from './BooksAccions';
 
-const BookData = ({book, quote, writer, name, dni}) => {
+const BookData = ({book, quote, writer, name, dni, onBack}) => {
     return (
         <div>
             <div className="book-data">
@@ -13,14 +14,17 @@ const BookData = ({book, quote, writer, name, dni}) => {
                 <div><strong>Nombre: </strong>{name}</div>
                 
             </div>
+            <BooksAccions>
+                <button onClick={onBack}>ir atras</button>
+            </BooksAccions>
         </div>
     );
 };
 
 BookData.propTypes = {
     book: PropTypes.string.isRequired,
-    quote: PropTypes.number.isRequired,
-    writer: PropTypes.number.isRequired,
+    quote: PropTypes.string.isRequired,
+    writer: PropTypes.string.isRequired,
 };
 
 export default BookData;
