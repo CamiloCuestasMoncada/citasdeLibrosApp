@@ -8,7 +8,7 @@ const AppFrame = ({header, body, footer}) => {
             <div className="app-frame">
                 <AppHeader title={header}></AppHeader>
                 <div>{body}</div>
-                <div>Aplicación para compartir citas</div>
+                <h2 className="titulo">¡Las mejores citas, en un mismo lugar!</h2>
             </div>
         </div>
     );

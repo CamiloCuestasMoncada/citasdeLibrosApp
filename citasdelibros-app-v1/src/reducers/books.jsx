@@ -1,6 +1,6 @@
 
 import { handleActions } from "redux-actions";
-import { FETCH_BOOKS, UPDATE_BOOK } from '../constants/index';
+import { DELETE_BOOK, FETCH_BOOKS, UPDATE_BOOK } from '../constants/index';
 import { INSERT_BOOK } from './../constants/index';
 
 export const books = handleActions({
@@ -19,5 +19,7 @@ export const books = handleActions({
             }
         },initialValue);
         return newBooks;
+        
     },
+    [DELETE_BOOK]: (state, action) => state.filter(c => c.id !== action.payload)
 },[]);

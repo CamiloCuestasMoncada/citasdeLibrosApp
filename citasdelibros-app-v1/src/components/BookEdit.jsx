@@ -22,7 +22,24 @@ let errorMessage = meta => {
 const MyField = ({input, meta, type, label, name}) => (
     <div>
         <label htmlFor={name}>{label}</label>
-        <input {...input} type ={!type ? "text" : type}/>
+       
+        <input {...input} type ={!type ? "text" : type} />
+        
+        
+        
+       {errorMessage(meta)}
+        
+    </div>
+);
+
+const MyFieldQuote = ({input, meta, type, label, name}) => (
+    <div>
+        <label htmlFor={name}>{label}</label>
+       
+        <textarea {...input} type ={!type ? "text" : type}  className="editQuote"/>
+        
+        
+        
        {errorMessage(meta)}
         
     </div>
@@ -80,8 +97,9 @@ const BookEdit = ({name,book, quote, writer, handleSubmit, submitting, onBack, p
                 
                     
                     <Field 
+                       
                         name="quote" 
-                        component={MyField}  
+                        component={MyFieldQuote}  
                         label = "Cita"
                         //validate={isRequired}
                     >

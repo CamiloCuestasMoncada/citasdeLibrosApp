@@ -11,6 +11,7 @@ import BookData from '../components/BookData';
 import { fetchBooks } from './../actions/fetchBooks';
 import { updateBook } from './../actions/updateBooks';
 import { SubmissionError } from 'redux-form';
+import { deleteBook } from './../actions/deleteBook';
 
 
 
@@ -44,23 +45,37 @@ class BookContainer extends Component {
         this.props.history.goBack();
     }
 
-    renderBody = () => (
-        <Route 
-        path="/books/:dni/edit"
-        children={
-            ({match}) => {
-                if(this.props.book)
-                {const BookControl = match ? BookEdit : BookData;
+    handleOnDelete = id => {
+        console.log("handleDeleted");
+        this.props.deleteBook(id).then(v => {
+            this.props.history.goBack();
+        });
+    }
+    renderBookControl =(isEdit, isDelete) => {
+        if(this.props.book)
+                {const BookControl = isEdit ? BookEdit : BookData;
                 return<BookControl {...this.props.book} 
                             onSubmit={this.handleSubmit}
                             onSubmitSuccess={this.handleOnSubmitSuccess}
                             onBack={this.handleOnBack}
+                            isDeleteAllow={!!isDelete}
+                            onDelete={this.handleOnDelete}
                       />} return null;
-                
-            }
-        }
-        
-        />
+    }
+    renderBody = () => (
+        <Route 
+        path="/books/:dni/edit"
+        children={
+            ({match: isEdit}) => (
+                <Route 
+                path="/books/:dni/del"
+                children={
+                    ({match:isDelete}) => (
+                        this.renderBookControl(isEdit, isDelete)
+                    )
+                }/>
+            )
+        }/>
 
         
     )
@@ -112,5 +127,6 @@ const mapSateToProps = (state,props) => ({
 
 export default withRouter(connect(mapSateToProps,{
     fetchBooks,
-    updateBook 
+    updateBook ,
+    deleteBook
 })(BookContainer));
