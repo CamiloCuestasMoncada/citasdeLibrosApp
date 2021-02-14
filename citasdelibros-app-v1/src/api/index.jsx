@@ -1,5 +1,6 @@
 
 
+
 export const apiGet = (url) => () => fetch(url).then(v => v.json());  //obtengo dartos del servidor
 
 export const apiPut = (url, id, obj) => () => 
@@ -29,6 +30,8 @@ export const apiPost = (url,obj) => () =>
     }
     return r;
     })
+    
+
 
     export const apiDelete = (url,id) => () =>
     fetch(`${url}/${id}`,{
@@ -43,3 +46,4 @@ export const apiPost = (url,obj) => () =>
     }
     return id || r;
     })
+
