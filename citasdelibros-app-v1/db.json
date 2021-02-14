@@ -1,34 +1,47 @@
 {
   "books": [
-
     {
-        "dni": "95162081",
-        "name": "Camilo",
-        "quote": "El mundo era tan reciente, que muchas cosas carecían de nombre, y para mencionarlas había que señalarlas con el dedo.",
-        "book": "Cien años de soledad",
-        "writer": "Gabriel García Márquez"
-
+      "id": "95962081",
+      "dni": "975486521",
+      "name": "Paloma D",
+      "quote": "¡Qué extraña cosa el conocimiento! Una vez que ha penetrado en la mente, se aferra a ella como la hiedra a la roca.",
+      "book": "Frankenstein.",
+      "writer": "Mary Shelley",
+      "isDeleteAllow": false
     },
     {
-      "dni": "95165081",
-      "name": "Pedro",
-      "quote": "El tiempo corre de la misma manera para todos los seres humanos; pero todo ser humano flota de distinta manera en el tiempo",
-      "book": "Lo bello y lo triste",
-      "writer": "Yasunari Kawabata"
+      "quote": "¡Ah, la música! -Dijo, enjugándose los ojos. ¡Una magia más allá de todo lo que hacemos aquí!",
+      "book": "Harry Potter y la piedra filosofal",
+      "writer": "Joanne Kathleen Rowling",
+      "name": "Aquiles ",
+      "dni": "1023908577",
+      "id": "wqi5_Pf"
     },
     {
-      "dni": "95962081",
-      "name": "Camilo",
-      "quote": "gdsfgsdfgsdfgddsfgsdfgdfgdsd fsg",
-      "book": "gfdgf",
-      "writer": "dfdf"
-
+      "book": "Ensayo sobre la ceguera",
+      "writer": "Jose Saramago",
+      "name": "Skarpink",
+      "dni": "95068091",
+      "quote": "“Si no somos capaces de vivir enteramente como personas, hagamos lo posible para no vivir enteramente como animales, y tantas veces lo repitió, que el resto de la sala acabó por convertir en máxima, en sentencia, en doctrina, en regla de vida, aquellas palabras, en el fondo simples y elementales.”",
+      "id": "cy1Ciqu"
+    },
+    {
+      "quote": "“El tiempo corre de la misma manera para todos los seres humanos; pero todo ser humano flota de distinta manera en el tiempo.„\n\n",
+      "writer": "yasunari kawabata",
+      "name": "Camilo ",
+      "dni": "95162081",
+      "book": "Lo bello y lo triste.",
+      "id": "y5tB-WW"
+    },
+    {
+      "book": "dsdfbsdfb sdf sdfg sdfdsdsdf sdfgss  sdfgsdfg   sdfgsdfgsd  sdfg ssdf",
+      "quote": "sdfgsdfgsdfgsdf sdfg ssf vb dfgb fsdfgsdfgsdfg  sdfgsdfgsdfg  sdfgsdfg",
+      "writer": "sdfsdfsdf",
+      "name": "sssss",
+      "dni": "564825",
+      "id": "06JHSVW"
     }
-
-],
-
-
-
+  ],
   "posts": [
     {
       "id": 1,

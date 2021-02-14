@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const BookListItem = ({dni, book, editAction, delAction, urlPath}) => {
     
     return (
-        <div>
+        
             <div className="book-list-item">
                 <div className="field">
                     <Link to= {`${urlPath}${dni}`}>{book}</Link>
@@ -20,7 +20,7 @@ const BookListItem = ({dni, book, editAction, delAction, urlPath}) => {
                     <Link to= {`${urlPath}${dni}/del`}>{delAction}</Link>
                 </div>
             </div>
-        </div>
+        
     );
 };
 

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import BooksContainer from './containers/BooksContainer';
 import HomeContainer from './containers/HomeContainer';
 import BookContainer from './containers/BookContainer';
+import NewBookContainer from './containers/NewBookContainer';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   //const renderBookContainer = () => <h1>Book Container</h1>;
   //const renderBookContainer2 = () => <h1>Book Deleted</h1>;
   //const renderCustomerListContainer = () => <h1>Customers List Container</h1>
-  const renderBookNewContainer = () => <h1>Book New Container</h1>;
+  //const renderBookNewContainer = () => <h1>Book New Container</h1>;
   
   return (
     <Router>
@@ -22,7 +23,7 @@ function App() {
         <Route exact path="/books" render={BooksContainer}/>
         <Switch>
 
-          <Route path="/books/new" component={renderBookNewContainer}/> 
+          <Route path="/books/new" component={NewBookContainer}/> 
           
 
           <Route path="/books/:dni" 

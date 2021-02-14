@@ -5,8 +5,8 @@ import BookListItem from './BookListItem';
 
 const BookList = ({books, urlPath}) => {
     return (
-        <div>
-            <div className="book-list">
+        
+            <div className="books-list">
                 {
                     books.map(c => 
 
@@ -27,7 +27,7 @@ const BookList = ({books, urlPath}) => {
                 }
                 
             </div>
-        </div>
+        
     );
 };
 
